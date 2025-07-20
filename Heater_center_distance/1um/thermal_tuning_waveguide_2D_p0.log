@@ -1,0 +1,14 @@
+Lumerical DEVICE Heat Transport Solver Version 7.1.1584 (Windows 64bit)
+ expires (month/day/year): 12/31/2025
+using config file: C:/Users/Eylon/AppData/Roaming/Lumerical/Lumerical DEVICE.ini
+license host: <a href=http://localhost:8095>localhost:8095</a>
+basic tests complete
+current time: Sat Jul 17 15:55:36 2021
+Running on host: DESKTOP-UOC232B
+Running ldev file: C:\Program Files\Lumerical\DEVICE\bin\thermal-engine-msmpi.exe C:/Users/Eylon/Documents/Lumerical/Heater_center_distance/1um/thermal_tuning_waveguide_2D.ldev -remote -mesh-only
+  ...C:/Users/Eylon/Documents/Lumerical/Heater_center_distance/1um/thermal_tuning_waveguide_2D.ldev loaded
+Generating mesh.
+Mesh generation complete (1s)
+  + vertices: 16734
+  + elements: 32943
+All processes are communicating and ready to proceed to simulation...

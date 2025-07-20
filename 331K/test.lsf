@@ -1,0 +1,29 @@
+clear;
+power = [0; 0.0239; 0.03]; # total power in Watts
+neff = matrix(length(power));
+# import T map
+matlabload("T.mat");
+select('temperature');
+importdataset(T);
+
+switchtolayout;
+# find neff with no heating
+setnamed('temperature','enabled',0);
+setanalysis('wavelength',1.55e-6);
+findmodes;
+neff0 = real(getdata('mode1','neff'));
+
+# read T map 
+
+for (i=1:length(power)){
+switchtolayout;
+setnamed('temperature','enabled',1);
+setnamed('temperature','P_index',i);
+findmodes;
+neff(i) = real(getdata('mode1','neff'));
+}
+
+L = 320e-6;
+lambda = 1.55e-6;
+phase = 2*pi*(neff-neff0)*L/lambda;
+plot(power, phase, 'power (W)','phase');
